@@ -1,5 +1,5 @@
 # Core dependencies
-agency-swarm[fastapi]>=1.0.0b3
+agency-swarm[fastapi]>=1.0.0b4
 python-dotenv==1.0.1
 
 # MCP Server dependencies

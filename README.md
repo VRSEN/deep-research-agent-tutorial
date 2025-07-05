@@ -201,5 +201,3 @@ MCP_SERVER_URL="https://<your-ngrok-url>.ngrok-free.app/sse" python agency.py --
 python tests/test_comprehensive.py
 # Comprehensive testing of all features and components
 ```
-
-

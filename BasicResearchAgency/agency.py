@@ -12,12 +12,11 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from agency_swarm import Agency, Agent
-from agents import WebSearchTool, HostedMCPTool
+from agents import HostedMCPTool, WebSearchTool
 from agents.mcp import MCPServerSse
+from dotenv import load_dotenv
 
 from utils import run_agency_demo
-
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -48,6 +47,5 @@ research_agent = Agent(
 agency = Agency(research_agent)
 
 if __name__ == "__main__":
-    #run_agency_demo(agency)
-    # agency.create_interactive_visualization()
-    
+    run_agency_demo(agency)
+    # agency.visualize()
