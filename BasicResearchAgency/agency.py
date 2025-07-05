@@ -12,7 +12,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from agency_swarm import Agency, Agent
-from agents import HostedMCPTool, WebSearchTool
+from agents import HostedMCPTool, ModelSettings, WebSearchTool, model_settings
 from agents.mcp import MCPServerSse
 from dotenv import load_dotenv
 
@@ -29,6 +29,11 @@ print(f"📡 MCP Server URL: {MCP_SERVER_URL}")
 research_agent = Agent(
     name="Research Agent",
     model="o4-mini-deep-research-2025-06-26",
+    model_settings=ModelSettings(
+        extra_args={
+            "max_tool_calls": 5
+        }
+    ),
     tools=[
         WebSearchTool(),
         HostedMCPTool(
